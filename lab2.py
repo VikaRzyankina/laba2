@@ -5,11 +5,11 @@ def repl(n):
 uwu=[]
 kl=False
 import re
-f=open('text.txt')
+f=open('text.txt') #открываем файл
 while True:
-    buff=f.readline()
-    if not buff:
-        if not kl:
+    buff=f.readline() #читаем первый блок
+    if not buff: 
+        if not kl: #если файл пуст
             print('Файл пуст')
         break
     u=re.findall(r'\b(?!\d*0{5}\d*0{5}\d*0{5}\d*)\d+\b',buff)
